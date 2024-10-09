@@ -35,7 +35,7 @@ Once the time runs out, the "Buy" button should be disabled and non-clickable.
 
 ### Screenshot
 
-![](DesktopScreenShop.PNG)
+![](DesktopScreenShot.PNG)
 
 ## Our process
 
