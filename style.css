@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* General */
+:root {
+  --soft-gray: hsl(220, 13%, 91%);
+  --soft-gray-2: hsl(220, 14%, 96%);
+  --gray: hsl(220, 9%, 46%);
+  --dark-blue: hsl(221, 39%, 11%);
+  --blue: #4f46e5;
+  --soft-blue: #6366f1;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body,
+button,
+h1 {
+  font-family: "Inter", sans-serif;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  padding: 48px 0;
+}
+
+/* Ajustes de la lista */
+.list {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente fila si no hay espacio */
+  gap: 40px; /* Añade un espacio de 40px entre las tarjetas en todas direcciones */
+  justify-content: flex-start; /* Alinea las tarjetas al inicio en filas */
+}
+
+/* Estilo de las tarjetas */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 390px;
+  border: 2px solid var(--soft-gray);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0; /* El margen entre las tarjetas será controlado por el gap */
+  flex: 1 1 calc(33.333% - 40px); /* Ajusta el ancho de cada tarjeta con espacio para el margen */
+}
+
+.card__image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+}
+
+
+
+.card__timer {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+button {
+  padding: 8px 16px;
+  background-color: rgb(35, 158, 196);
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+button:hover {
+  background-color: var(--soft-blue);
+}
+
+button:disabled {
+  background-color: var(--soft-gray);
+  cursor: not-allowed;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.card{
+  margin: 20px;
+  justify-content: center;
+}
+.card h2{
+  font-size: 15px;
+}
+button{
+  margin: 10px;
+}
+.timer-button-container {
+  display: flex;
+  justify-content: space-between; /* Espaciado entre el temporizador y el botón */
+  align-items: center; /* Alinea verticalmente el temporizador y el botón */
+  margin-top: 10px; /* Separación con el contenido anterior */
+}
+.timer {
+  margin-right: 160px; /* Espaciado opcional entre el temporizador y el botón */
+}
+/* Media queries */
+@media (max-width: 1000px) {
+  .list {
+    justify-content: center; /* Centra las tarjetas cuando no hay espacio suficiente */
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 40px); /* Ajusta el ancho de las tarjetas para pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%; /* En pantallas pequeñas, las tarjetas ocuparán todo el ancho disponible */
+  }
+}
