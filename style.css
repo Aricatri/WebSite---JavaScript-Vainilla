@@ -18,9 +18,7 @@
   text-decoration: none;
 }
 
-body,
-button,
-h1 {
+body,button,h1 {
   font-family: "Inter", sans-serif;
 }
 
@@ -40,7 +38,7 @@ h1 {
 }
 
 /* Estilo de las tarjetas */
-.card {
+.productcard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,11 +88,11 @@ button:disabled {
   gap: 10px;
   justify-content: center;
 }
-.card{
+.productcard{
   margin: 20px;
   justify-content: center;
 }
-.card h2{
+.productcard h2{
   font-size: 15px;
 }
 button{
@@ -115,13 +113,13 @@ button{
     justify-content: center; /* Centra las tarjetas cuando no hay espacio suficiente */
   }
 
-  .card {
+  .productcard {
     flex: 1 1 calc(50% - 40px); /* Ajusta el ancho de las tarjetas para pantallas más pequeñas */
   }
 }
 
 @media (max-width: 600px) {
-  .card {
+  .productcard {
     flex: 1 1 100%; /* En pantallas pequeñas, las tarjetas ocuparán todo el ancho disponible */
   }
 }
