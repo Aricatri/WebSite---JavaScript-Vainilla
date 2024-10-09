@@ -7,7 +7,7 @@ export function renderProducts() {
 
   productsData.forEach((product) => {
     const productCard = document.createElement("article");
-    productCard.classList.add("card");
+    productCard.classList.add("productcard");
 
     // Crear y configurar la imagen del producto
     const img = document.createElement("img");
