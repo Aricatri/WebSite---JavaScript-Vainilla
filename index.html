@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Productos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Productos</h1>
+    <hr class="linea">
+    <div class="product-list"></div>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="timer.js"></script>
+    <script type="module" src="render.js"></script>
+    <script type="module">
+      import { fetchProducts } from './data.js';
+      import { renderProducts } from './render.js';
+
+      // Obtener productos y renderizarlos cuando la página cargue
+      document.addEventListener('DOMContentLoaded', async () => {
+        await fetchProducts();
+        renderProducts();
+      });
+    </script>
+  </body>
+</html>
